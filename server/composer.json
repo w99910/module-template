@@ -1,0 +1,10 @@
+{
+    "name": "",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Zawlintun\\Server\\": "src/"
+        }
+    },
+    "require": {}
+}
