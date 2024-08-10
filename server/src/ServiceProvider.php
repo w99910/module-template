@@ -1,5 +1,7 @@
 <?php
 
+namespace ThomasBrillion\Module;
+
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Support\ServiceProvider;
 
