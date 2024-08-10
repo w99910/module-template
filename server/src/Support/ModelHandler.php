@@ -2,6 +2,7 @@
 
 namespace ThomasBrillion\Module\Support;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Contracts\Container\Container;
 
 class ModelHandler
@@ -44,9 +45,10 @@ class ModelHandler
 
     public static function query(): Builder
     {
-        $model = static::$instance->model;
+        $model = static::getInstance()->model;
         if (empty($model)) {
-            throw new \Exception("Please register model with `", 404);
+            $class = get_class(static::getInstance());
+            throw new \Exception("Please register model with $class::registerModel", 404);
         }
         return (new $model)->newQuery();
     }
