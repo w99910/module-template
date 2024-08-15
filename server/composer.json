@@ -6,8 +6,11 @@
             "ThomasBrillion\\module\\": "src/"
         }
     },
+    "minimum-stability": "stable",
+    "scripts": {
+        "test": "./vendor/bin/pest"
+    },
     "require": {
-        "php": "^8.1|^8.2|^8.3",
         "illuminate/http": "^9.0|^10.0|^11.0",
         "illuminate/routing": "^9.0|^10.0|^11.0",
         "illuminate/support": "^9.0|^10.0|^11.0",
@@ -17,5 +20,20 @@
         "illuminate/mail": "^9.0|^10.0|^11.0",
         "illuminate/queue": "^9.0|^10.0|^11.0",
         "illuminate/validation": "^9.0|^10.0|^11.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.20|^2.34",
+        "illuminate/testing": "^10.10.0|^11.0",
+        "friendsofphp/php-cs-fixer": "^3.54"
+    },
+    "extra": {
+        "laravel": {
+            "providers": []
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
 }
